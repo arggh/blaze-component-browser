@@ -1,0 +1,28 @@
+<template name="componentBrowser">
+  <div class="{{styles.layout}}">
+    <div class="{{styles.sidebar}}">
+      {{#each components}}
+        <a {{b "click: openComponent(this)"}} href="#">{{this.name}}</a>
+      {{/each}}
+    </div>
+    <div class="{{styles.view}}">
+      {{#if component}}
+        <div class="{{styles.configurations}}">
+          {{#each component.props }}
+            <a {{b "click: openConfiguration(this)"}} href="#">{{this.title}}</a>
+          {{/each}}
+        </div>
+        <div class="{{styles.componentContainer}}">
+          {{> frame frameProps }}
+        </div>
+        <div class="{{styles.dataContextContainer}}">
+          <pre><code>{{{ code configuration.dataContext }}}</code></pre>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</template>
+
+<template name="frame">
+  <iframe {{b "ref: iframe"}} id="iframe" title="preview" src={{pathFor 'frame'}} allowfullscreen="" style="width: 100%; height: 100%; border: 0px; margin: 0px; padding: 0px;"></iframe>
+</template>

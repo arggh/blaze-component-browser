@@ -1,0 +1,61 @@
+.layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100%;
+}
+
+.sidebar {
+  background: #ccc;
+  flex-basis: 20%;
+  min-width: 200px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  a, a:hover {
+    color: #222;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+}
+
+.view {
+  flex-basis: 80%;
+  background: #eee;
+  padding: 2rem;
+
+  .configurations {
+    height: 4rem;
+    a {
+      color: #888;
+      border: 1px solid #888;
+      border-radius: 10rem;
+      padding: .3rem 1rem;
+      margin-right: .5rem;
+      font-size: 14px;
+      display: inline-block;
+    }
+  }
+
+  .componentContainer {
+    background: transparent;
+
+    > iframe {
+      min-height: calc(100vh - 4rem);
+    }
+  }
+
+  .dataContextContainer {
+    background: #444;
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+    font-size: 13px;
+  }
+}
