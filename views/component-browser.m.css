@@ -31,14 +31,15 @@
   padding: 2rem;
 
   .configurations {
-    height: 4rem;
+    padding-bottom: 1rem;
     a {
       color: #888;
       border: 1px solid #888;
       border-radius: 10rem;
       padding: .3rem 1rem;
       margin-right: .5rem;
-      font-size: 14px;
+      margin-top: .5rem;
+      font-size: 11px;
       display: inline-block;
     }
   }
